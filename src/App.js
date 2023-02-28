@@ -25,7 +25,7 @@ export default class App {
     this.openWeather = new OpenWeather({
       appid: API_KEY,
       lat: 0,
-      lng: 0
+      lon: 0
     })
   }
 
