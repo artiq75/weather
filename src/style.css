@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --radius: 7px;
+  --shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+.title {
+  text-align: center;
+}
+
+.map {
+  min-height: 100vh;
+  width: calc(100% - 2em);
+  margin: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.weather-items {
+  display: flex;
+  gap: 1em;
+}
+
+.weather-item {
+  box-shadow: var(--shadow);
+  min-width: 200px;
+  padding: 1em;
+  border-radius: var(--radius);
+  transition-duration: 1s;
+}
+
+.weather-item.remove {
+  transform: translateY(100%);
+  opacity: 0;
+}
